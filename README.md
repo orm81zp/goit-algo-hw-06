@@ -19,14 +19,17 @@ pip install -r requirements.txt
 
 ### Виконання
 
-За основу моделі графа були взяті відстані між містами України.
+За основу моделі графа був взятий словник з відстанями між містами України.
 
 ```
-graph = {
-  "Kyiv": {"Zhytomyr", "Uman'": 215},
-  "Zhytomyr": {"Vinnytsia": 155, "Lutks": 265},
-  "Vinnytsia": {"Ternopil": 235, "Uman'": 160},
-  "Lviv": {"Lutks": 155, "Ternopil": 127},
+{
+  "Kyiv": ["Zhytomyr", "Uman'"],
+  "Uman'": ["Kyiv", "Vinnytsia"],
+  "Vinnytsia": ["Uman'", "Zhytomyr", "Ternopil"],
+  "Zhytomyr": ["Kyiv", "Vinnytsia", "Lutks"],
+  "Ternopil": ["Vinnytsia", "Lviv"],
+  "Lutks": ["Zhytomyr", "Lviv"],
+  "Lviv": ["Lutks", "Ternopil"],
 }
 ```
 
@@ -107,6 +110,20 @@ python task_2.py
 ### Виконання
 
 Домашнє завдання виконано у файлі task_3.py.
+
+За основу моделі графа був взятий словник з відстанями між містами України та вагами ребер.
+
+```
+{
+  "Kyiv": {"Zhytomyr": 140, "Uman'": 215},
+  "Uman'": {"Kyiv": 215, "Vinnytsia": 160},
+  "Vinnytsia": {"Uman'": 160, "Zhytomyr": 155, "Ternopil": 235},
+  "Zhytomyr": {"Kyiv": 140, "Vinnytsia": 155, "Lutks": 265},
+  "Ternopil": {"Vinnytsia": 235, "Lviv": 127},
+  "Lutks": {"Zhytomyr": 265, "Lviv": 155},
+  "Lviv": {"Lutks": 155, "Ternopil": 127},
+}
+```
 
 ### Приклад роботи програми
 
