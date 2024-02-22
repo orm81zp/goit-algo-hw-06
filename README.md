@@ -57,17 +57,17 @@ python task_1.py
 Кількість вузлів: 7
 Кількість ребер: 8
 Ступінь вершин:
-Kyiv: 2, Zhytomyr: 3, Uman': 2, Vinnytsia: 3, Lutks: 2, Ternopil: 2, Lviv: 2
+Kyiv: 2, Zhytomyr: 3, Uman': 2, Vinnytsia: 3, Ternopil: 2, Lutks: 2, Lviv: 2
 Граф є сполученим
 
 Метрик центральності вузлів:
 ----------------------------
 Ступінь центральності:
-Kyiv: 0.33, Zhytomyr: 0.50, Uman': 0.33, Vinnytsia: 0.50, Lutks: 0.33, Ternopil: 0.33, Lviv: 0.33
+Kyiv: 0.33, Zhytomyr: 0.50, Uman': 0.33, Vinnytsia: 0.50, Ternopil: 0.33, Lutks: 0.33, Lviv: 0.33
 Ступінь близькості:
-Kyiv: 0.50, Zhytomyr: 0.67, Uman': 0.50, Vinnytsia: 0.67, Lutks: 0.55, Ternopil: 0.55, Lviv: 0.50
+Kyiv: 0.50, Zhytomyr: 0.67, Uman': 0.50, Vinnytsia: 0.67, Ternopil: 0.55, Lutks: 0.55, Lviv: 0.50
 Ступінь посередництва:
-Kyiv: 0.07, Zhytomyr: 0.33, Uman': 0.07, Vinnytsia: 0.33, Lutks: 0.13, Ternopil: 0.13, Lviv: 0.07
+Kyiv: 0.07, Zhytomyr: 0.33, Uman': 0.07, Vinnytsia: 0.33, Ternopil: 0.13, Lutks: 0.13, Lviv: 0.07
 ```
 
 ### Візуалізація графа
