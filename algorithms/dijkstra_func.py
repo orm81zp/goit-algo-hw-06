@@ -16,7 +16,7 @@ def print_table(distances, visited):
     print("\n")
 
 
-def dijkstra(graph, start):
+def dijkstra(graph, start, print_stat=False):
     distances = {vertex: float("infinity") for vertex in graph}
     distances[start] = 0
     unvisited = list(graph.keys())
@@ -36,20 +36,8 @@ def dijkstra(graph, start):
         visited.append(current_vertex)
         unvisited.remove(current_vertex)
 
-        # Вивід таблиці після кожного кроку
-        print_table(distances, visited)
+        if print_stat:
+            # Вивід таблиці після кожного кроку
+            print_table(distances, visited)
 
     return distances
-
-
-# Приклад графа у вигляді словника
-graph = {
-    "A": {"B": 5, "C": 10},
-    "B": {"A": 5, "D": 3},
-    "C": {"A": 10, "D": 2},
-    "D": {"B": 3, "C": 2, "E": 4},
-    "E": {"D": 4},
-}
-
-# Виклик функції для вершини A
-print(dijkstra(graph, "A"))

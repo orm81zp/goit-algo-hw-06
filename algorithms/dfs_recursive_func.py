@@ -1,21 +1,12 @@
-def dfs_recursive(graph, vertex, visited=None):
+def dfs_recursive(graph, vertex, visited=None, show_visited=False):
     if visited is None:
         visited = set()
     visited.add(vertex)
 
-    print(vertex, end=" ")
+    if show_visited:
+        print(vertex, end=" ")
     for neigbor in graph[vertex]:
         if neigbor not in visited:
-            dfs_recursive(graph, neigbor, visited)
+            dfs_recursive(graph, neigbor, visited, show_visited)
 
-
-graph = {
-    "A": ["B", "C"],
-    "B": ["A", "D", "E"],
-    "C": ["A", "F"],
-    "D": ["B"],
-    "E": ["B", "F"],
-    "F": ["C", "E"],
-}
-
-dfs_recursive(graph, "A")
+    return visited
