@@ -1,7 +1,7 @@
 from collections import deque
 
 
-def bfs_iterative(graph, start, show_visited=False):
+def bfs_iterative(graph, start):
     # Ініціалізація порожньої множини для зберігання відвіданих вершин
     visited = set()
     # Ініціалізація черги з початковою вершиною
@@ -12,9 +12,8 @@ def bfs_iterative(graph, start, show_visited=False):
         vertex = queue.popleft()
         # Перевіряємо, чи була вершина відвідана раніше
         if vertex not in visited:
-            if show_visited:
-                # Якщо не була відвідана, друкуємо її
-                print(vertex, end=" ")
+            # Якщо не була відвідана, друкуємо її
+            print(f"=> {vertex}", end=" ")
             # Додаємо вершину до множини відвіданих вершин
             visited.add(vertex)
             # Додаємо всіх невідвіданих сусідів вершини до кінця черги
